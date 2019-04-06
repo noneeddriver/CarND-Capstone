@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
     <node pkg="waypoint_updater" type="waypoint_updater.py" name="waypoint_updater">
-    <param name="lookahead_wps" value="150" />
+    <param name="lookahead_wps" value="15" />
     </node>
 </launch>

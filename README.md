@@ -149,7 +149,7 @@ I build my autonomous vehicle system from a usual chain for a self-driving car:
 
 I break these three parts into several submodules. Each submodule is implemented within a node in ROS. All node communicate with each other through publish/subcribe to specific topics. These topic update in different frequencies depending on the need.
 
-![System Architecture](/home/paul/Documents/Udacity/CarND-Capstone/imgs/System_Structure.png)
+![](imgs/System_Structure.png)
 
 #### 5.2 Code Structure
 
