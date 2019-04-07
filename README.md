@@ -261,7 +261,7 @@ Non-trainable params: 14,714,688
 
 After 4th epoch, the train accuracy increases further but the test accuracy starts to oscillate. That means the the model is over fitted after 4th epoch. which is quite normal, as the dataset is quite small the learning rate is constant. 
 
-![](/home/paul/Documents/Udacity/CarND-Capstone/imgs/accuracy_first_train.png)
+![](./imgs/accuracy_first_train.png)
 
 I analyzed the incorrect prediction. They are all very difficult samples: the traffic light is very small and not quite clear because of the big distance to the traffic light. To get a stable prediction I filtered out this super difficult samples from the train samples. With the new dataset I retrain my model on the 4th epoch again, using a learning rate decay. That means the learning rate decrease after each step.  In the end, I get a test accuracy of 94%, which is unexpectedly even higher than the biggest validation accuracy 0.8638. Anyway, the second slower transfer learning works well. 
 
@@ -308,7 +308,7 @@ The code style in this project is according to  [Google Python Style Guide](http
 
 There is a bug at the valley track: the car drove off the lane middle and even on the lane line. I can still not fix it. Dose it lead back to the imperfect base_waypoints?
 
-![1554328004818](/home/paul/Documents/Udacity/CarND-Capstone/imgs/Bug_driving_on_the_line.png)
+![1554328004818](./imgs/Bug_driving_on_the_line.png)
 
 #### 7.2 FalsePositiv Yellow light
 
@@ -322,5 +322,3 @@ As the car drives through the intersection and the light is green, the light wou
 2. Thank Autoware for providing the waypoint_follower module;
 3. Thank the mentors and other students in the program;
 4. etc.
-
-# 
