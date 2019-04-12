@@ -43,8 +43,8 @@ class TLDetector(object):
         sub6 = rospy.Subscriber('/image_color', Image, self.image_cb)
 
         config_string = rospy.get_param("/traffic_light_config")
-        self.config = yaml.load(config_string, Loader = yaml.FullLoader)
-
+        # self.config = yaml.load(config_string, Loader = yaml.FullLoader) # for PyYAML 5.1 and later
+	self.config = yaml.load(config_string)
         self.upcoming_red_light_pub = rospy.Publisher('/traffic_waypoint', Int32, queue_size=2)
 
         self.bridge = CvBridge()
